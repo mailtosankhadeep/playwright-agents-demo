@@ -20,10 +20,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Ensure Playwright CLI is executable
-        run: chmod +x node_modules/.bin/playwright  
+      - name: Add local npm bin to PATH
+        run: echo "$(npm bin)" >> $GITHUB_PATH
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
