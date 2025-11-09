@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+dist/
+out/
+build/
+*.tsbuildinfo
+
+# Playwright artifacts
+test-results/
+playwright-report/
+trace.zip
+
+# Coverage reports
+coverage/
+.nyc_output/
+lcov.info
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Env files
+.env
+.env.*
+
+# VS Code settings overrides
+.vscode/*.log
+
+# IDE directories
+.idea/
+.fleet/
+
+# OS junk
+.DS_Store
+Thumbs.db

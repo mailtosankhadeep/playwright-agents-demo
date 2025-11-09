@@ -1,0 +1,20 @@
+{
+  "name": "playwright-agents-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "bdd": "cucumber-js feature/**/*.feature --require-module ts-node/register --require step-definition/**/*.ts",
+    "bdd:headed": "set HEADED=1&& cucumber-js feature/**/*.feature --require-module ts-node/register --require step-definition/**/*.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.56.1"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "playwright": "^1.56.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
