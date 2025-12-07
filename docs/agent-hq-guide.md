@@ -145,12 +145,12 @@ Plan → Generate → Heal → Report
 
 ### Jira-Driven Development
 ```
-Jira → Test Designer → Generator → Healer → Done
+Jira → Test Designer → Done
 ```
 1. Fetch Jira story
 2. Convert to BDD scenarios
-3. Generate step definitions
-4. Fix any issues
+3. Generate step definitions (Test Designer orchestrates Generator internally)
+4. Fix any issues (Test Designer uses Healer if needed)
 5. Tests ready for CI
 
 ### Test Maintenance Sprint
@@ -232,7 +232,7 @@ npx playwright init-agents --loop=vscode
 ## Next Steps
 
 - Explore the [existing chatmodes](../.github/chatmodes/)
-- Review the [Test Designer agent](../.github/agents/Test%20Designer.agent.md)
+- Review the Test Designer agent in `.github/agents/Test Designer.agent.md`
 - Check out [example BDD scenarios](../feature/)
 - Try the interactive workflows above!
 

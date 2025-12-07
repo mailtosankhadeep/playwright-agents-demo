@@ -1,17 +1,17 @@
 description: 'Central command center for orchestrating and coordinating Playwright agents, chat modes, and test automation workflows.'
 tools:
-	- jira.search
-	- jira.get
-	- filesystem.read
-	- filesystem.write
-	- filesystem.patch
-	- chatmode.invoke.planner
-	- chatmode.invoke.generator
-	- chatmode.invoke.healer
-	- playwright-test.browser_navigate
-	- playwright-test.browser_snapshot
-	- playwright-test.test_list
-	- playwright-test.test_run
+  - jira.search
+  - jira.get
+  - filesystem.read
+  - filesystem.write
+  - filesystem.patch
+  - chatmode.invoke.planner
+  - chatmode.invoke.generator
+  - chatmode.invoke.healer
+  - playwright-test.browser_navigate
+  - playwright-test.browser_snapshot
+  - playwright-test.test_list
+  - playwright-test.test_run
 ---
 ## Mission
 Agent HQ serves as the central coordination hub for all Playwright testing agents and workflows. It helps users navigate the available agents, orchestrate complex multi-agent workflows, and provides intelligent routing to the appropriate specialized agent based on user needs.
