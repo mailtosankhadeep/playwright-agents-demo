@@ -1,21 +1,22 @@
 {
-	"servers": {
-		"playwright-test": {
-			"type": "stdio",
-			"command": "npx",
-			"args": [
-				"playwright",
-				"run-test-mcp-server"
-			]
-		},
-		"my-mcp-server-8dd641d7": {
-			"type": "stdio",
-			"command": "npx",
-			"args": [
-				"playwright",
-				"run-test-mcp-server"
-			]
-		}
-	},
-	"inputs": []
+  "servers": {
+    "playwright-test": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "playwright",
+        "run-test-mcp-server"
+      ]
+    },
+    "jira": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "ts-node",
+        "--transpile-only",
+        "mcp/jira-server.ts"
+      ]
+    }
+  },
+  "inputs": []
 }

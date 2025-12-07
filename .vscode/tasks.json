@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run BDD smoke test",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"bdd"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "test"
+		},
+		{
+			"label": "Run BDD smoke test",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"bdd"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "test"
+		}
+	]
+}

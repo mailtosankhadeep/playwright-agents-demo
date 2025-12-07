@@ -9,7 +9,10 @@
     "bdd:headed": "set HEADED=1&& cucumber-js feature/**/*.feature --require-module ts-node/register --require step-definition/**/*.ts"
   },
   "dependencies": {
-    "@playwright/test": "^1.56.1"
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "@playwright/test": "^1.56.1",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.0",

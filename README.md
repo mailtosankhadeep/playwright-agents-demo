@@ -69,6 +69,23 @@ This project is pre-wired to work with GitHub Copilot Playwright Agents via the 
 3. Reload VS Code (Command Palette → `Developer: Reload Window`) so Copilot can register the server.
 4. In Copilot Chat, request Playwright actions (e.g., "Run Playwright tests" or "Open the last trace"). The MCP server will broker those commands using the local Playwright install.
 
+### Jira MCP Server
+
+Copilot can also connect to Jira through the MCP server defined in `mcp/jira-server.ts`.
+
+1. Populate a `.env` file (or export variables in your shell) with:
+	```ini
+	JIRA_BASE_URL=https://your-domain.atlassian.net
+	JIRA_EMAIL=your.email@example.com
+	JIRA_API_TOKEN=your_api_token
+	```
+	Tokens can be created from [https://id.atlassian.com/manage-profile/security/api-tokens](https://id.atlassian.com/manage-profile/security/api-tokens).
+2. Ensure `ts-node` is available (installed via `npm install`).
+3. The `.vscode/mcp.json` already registers the Jira server via `npx ts-node --transpile-only mcp/jira-server.ts`.
+4. Ask Copilot Chat to "Search Jira issues" or "Get Jira issue ABC-123"—it will call the `jira.search` and `jira.get` tools exposed by the server.
+
+Errors from Jira (e.g., missing permissions) are surfaced directly in Copilot for quick troubleshooting.
+
 ### Installing Playwright Agent Chat Modes (Planner, Generator, Healer)
 
 Install the Playwright Agent chat modes once per workspace to populate `.github/chatmodes/` for Copilot.
