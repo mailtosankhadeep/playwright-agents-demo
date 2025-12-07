@@ -119,6 +119,8 @@ This repository includes specialized custom agents in `.github/agents/` that ext
 "What testing agents are available?" → Shows agent catalog
 ```
 
+📖 **[Read the complete Agent HQ Usage Guide](docs/agent-hq-guide.md)** for detailed examples and workflows.
+
 ### Test Designer 🎨
 
 **Test Designer** bridges Jira and automated testing by:
