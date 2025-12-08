@@ -1,0 +1,10 @@
+{
+  "chat.agent.enabled": true,
+  "github.copilot.chat.agents.enabled": true,
+  "chat.modeFilesLocations": {
+    ".github/agents": true
+  },
+  "chat.useAgentsMdFile": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.commandCenter.enabled": true
+}
