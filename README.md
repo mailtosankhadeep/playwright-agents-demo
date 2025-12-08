@@ -98,5 +98,38 @@ The command installs or updates the Planner, Generator, and Healer chat mode def
 
 If you prefer non-interactive startup, adjust the args to `"args": ["--yes", "playwright", "run-test-mcp-server"]` so `npx` skips prompts.
 
+## Custom Agents
+
+This repository includes specialized custom agents in `.github/agents/` that extend Copilot's capabilities:
+
+### Agent HQ 🏢
+
+**Agent HQ** is the central command center for orchestrating all Playwright agents and workflows. It serves as an intelligent router and coordinator that helps you:
+
+- **Discover the right agent**: Automatically routes your requests to the appropriate specialized agent (Planner, Generator, Healer, or Test Designer)
+- **Orchestrate workflows**: Coordinates complex multi-agent workflows (e.g., Plan → Generate → Heal)
+- **Monitor status**: Provides overview of test suite health and agent activities
+- **Simplify testing**: Single entry point for all testing needs
+
+**Example usage:**
+```
+"I need to test our new checkout flow" → Routes to Planner, then Generator
+"Fix all failing tests" → Runs tests, then routes failures to Healer
+"Convert Jira story SCRUM-10 to tests" → Routes to Test Designer
+"What testing agents are available?" → Shows agent catalog
+```
+
+📖 **[Read the complete Agent HQ Usage Guide](docs/agent-hq-guide.md)** for detailed examples and workflows.
+
+### Test Designer 🎨
+
+**Test Designer** bridges Jira and automated testing by:
+- Pulling Jira user stories and converting them to BDD scenarios
+- Orchestrating Generator to create Playwright step definitions
+- Handing off to Healer if tests need fixes
+- Maintaining traceability between Jira stories and test code
+
+Requires Jira environment variables (`JIRA_BASE_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`).
+
 ## GitHub Setup
 This repository is ready for GitHub pushes. Use the provided `.gitignore` to keep dependencies, build artefacts, and IDE files out of version control.

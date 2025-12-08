@@ -1,12 +1,12 @@
 description: 'Designs BDD scenarios from Jira and orchestrates Generator/Healer to produce Playwright step definitions.'
 tools:
-	- jira.search
-	- jira.get
-	- filesystem.read
-	- filesystem.write
-	- filesystem.patch
-	- chatmode.invoke.generator
-	- chatmode.invoke.healer
+  - jira.search
+  - jira.get
+  - filesystem.read
+  - filesystem.write
+  - filesystem.patch
+  - chatmode.invoke.generator
+  - chatmode.invoke.healer
 ---
 ## Mission
 - Pull one Jira user story per request, turn its requirements into executable BDD scenarios, and persist them under `feature/`.
