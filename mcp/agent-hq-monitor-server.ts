@@ -43,6 +43,8 @@ function ensureLogsDirectory(): void {
 function appendToLog(logFile: string, entry: any): void {
   ensureLogsDirectory();
   const logLine = JSON.stringify({ ...entry, timestamp: new Date().toISOString() }) + '\n';
+  // Using sync operations for simplicity and to ensure logs are written before response
+  // In high-load scenarios, consider switching to async operations with proper error handling
   fs.appendFileSync(logFile, logLine, 'utf-8');
 }
 
@@ -58,7 +60,9 @@ function readLogFile(logFile: string, limit?: number): any[] {
   const entries = lines.map(line => {
     try {
       return JSON.parse(line);
-    } catch {
+    } catch (error) {
+      // Skip malformed log lines - they may be from incomplete writes or corruption
+      // Could add debug logging here if troubleshooting log parsing issues
       return null;
     }
   }).filter(entry => entry !== null);
@@ -152,13 +156,15 @@ server.registerTool(
     }),
   },
   async ({ agent, action, status, duration, context }) => {
+    // Limit agent name and action length to prevent excessively large log entries
     const activity: AgentActivity = {
       timestamp: new Date().toISOString(),
-      agent,
-      action,
+      agent: agent.substring(0, 100),
+      action: action.substring(0, 200),
       status,
       duration,
-      context,
+      // Limit context size - stringify and check length
+      context: context ? JSON.parse(JSON.stringify(context).substring(0, 1000)) : undefined,
     };
     
     appendToLog(INVOCATIONS_LOG, activity);
@@ -189,14 +195,16 @@ server.registerTool(
     }),
   },
   async ({ workflowId, workflowType, status, agents, duration, context }) => {
+    // Limit field lengths to prevent excessively large log entries
     const workflow: WorkflowActivity = {
-      workflowId,
+      workflowId: workflowId.substring(0, 100),
       timestamp: new Date().toISOString(),
-      workflowType,
+      workflowType: workflowType.substring(0, 100),
       status,
-      agents: agents || [],
+      agents: (agents || []).slice(0, 20).map(a => a.substring(0, 100)),
       duration,
-      context,
+      // Limit context size
+      context: context ? JSON.parse(JSON.stringify(context).substring(0, 1000)) : undefined,
     };
     
     appendToLog(WORKFLOWS_LOG, workflow);
