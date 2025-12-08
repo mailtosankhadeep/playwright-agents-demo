@@ -150,5 +150,16 @@ This repository includes specialized custom agents in `.github/agents/` that ext
 
 Requires Jira environment variables (`JIRA_BASE_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`).
 
+### Creating Your Own Agents 🛠️
+
+You can create custom agents to extend Copilot's capabilities for your specific workflows:
+
+- Custom agents are defined in `.agent.md` files with YAML frontmatter
+- Place them in `.github/agents/` (workspace-level) or `~/.github/agents/` (global)
+- Define agent description, tools, delegation rules, and operating procedures
+- See `my-agent.agent.md` for an example template
+
+📖 **[Complete Custom Agent Creation Guide](docs/custom-agent-guide.md)** - Learn how to create and configure custom agents with step-by-step instructions and examples.
+
 ## GitHub Setup
 This repository is ready for GitHub pushes. Use the provided `.gitignore` to keep dependencies, build artefacts, and IDE files out of version control.
