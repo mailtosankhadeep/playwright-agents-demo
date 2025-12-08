@@ -21,7 +21,7 @@ Place your custom agent files in one of these locations:
 ### User Profile (Global)
 ```
 ~/.github/agents/  (Unix/Mac)
-%USERPROFILE%\.github\agents\  (Windows)
+%USERPROFILE%/.github/agents/  (Windows)
 ```
 - Available across all your repositories
 - Personal agents for your own workflows
@@ -360,16 +360,18 @@ Request review or mention the agent in PR description if `accept_pull_requests: 
 ## Examples in This Repository
 
 See these working examples:
-- `.github/agents/Agent HQ.agent.md` - Complex orchestration agent
-- `.github/agents/Test Designer.agent.md` - Jira integration agent
-- `.github/agents/my-agent.agent.md` - Template/example structure
+- `Agent HQ.agent.md` - Complex orchestration agent
+- `Test Designer.agent.md` - Jira integration agent  
+- `my-agent.agent.md` - Template/example structure
+
+All located in `.github/agents/` directory.
 
 ## Additional Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/copilot)
-- [MCP Server Configuration](.vscode/mcp.json)
-- [Playwright Agents Chat Modes](.github/chatmodes/)
-- [Agent HQ Usage Guide](./agent-hq-guide.md)
+- MCP Server Configuration: `../.vscode/mcp.json`
+- Playwright Agents Chat Modes: `../.github/chatmodes/`
+- [Agent HQ Usage Guide](agent-hq-guide.md)
 
 ## Contributing
 
