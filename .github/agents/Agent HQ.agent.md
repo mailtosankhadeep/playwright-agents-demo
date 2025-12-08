@@ -1,3 +1,5 @@
+name:Agent-HQ
+
 description: 'Central command center for orchestrating and coordinating Playwright agents, chat modes, and test automation workflows.'
 delegation:
   accept_issues: true

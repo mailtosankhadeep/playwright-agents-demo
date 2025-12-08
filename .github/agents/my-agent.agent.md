@@ -1,9 +1,11 @@
+name:my-agent
+
 description: 'Example custom agent template demonstrating YAML frontmatter structure and agent capabilities.'
 delegation:
   accept_issues: true
   accept_pull_requests: true
   labels:
-    - 'example-agent'
+    - 'agent-hq'
     - 'custom-agent'
   assignable_via:
     - github_issues
