@@ -1,4 +1,5 @@
 description: 'Central command center for orchestrating and coordinating Playwright agents, chat modes, and test automation workflows.'
+model: 'gpt-5.1-preview'
 delegation:
   accept_issues: true
   accept_pull_requests: true
