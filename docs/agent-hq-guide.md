@@ -229,12 +229,36 @@ npx playwright init-agents --loop=vscode
 "Use the Healer agent to fix user-login.spec.ts"
 ```
 
+## Monitoring Agent HQ
+
+Want to track Agent HQ activities and performance? Agent HQ includes built-in monitoring capabilities.
+
+### Quick Status Check
+
+```
+"What's the status of Agent HQ?"
+"Show me recent workflows"
+"Display agent performance metrics"
+```
+
+### Monitoring Features
+
+- **Activity Tracking**: See which agents have been invoked
+- **Performance Metrics**: Success rates, durations, error rates
+- **Workflow History**: Review past workflows and their outcomes
+- **System Health**: Check if agents are available and responsive
+
+📊 **[Learn about monitoring](agent-hq-monitoring.md)** for detailed tracking and analytics.
+
+🚀 **[Quick start guide](monitoring-quickstart.md)** to get monitoring running in 5 minutes.
+
 ## Next Steps
 
 - Explore the [existing chatmodes](../.github/chatmodes/)
 - Review the Test Designer agent in `.github/agents/Test Designer.agent.md`
 - Check out [example BDD scenarios](../feature/)
 - Try the interactive workflows above!
+- Set up [monitoring](monitoring-quickstart.md) to track your workflows
 
 ---
 

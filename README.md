@@ -86,6 +86,22 @@ Copilot can also connect to Jira through the MCP server defined in `mcp/jira-ser
 
 Errors from Jira (e.g., missing permissions) are surfaced directly in Copilot for quick troubleshooting.
 
+### Agent HQ Monitoring MCP Server
+
+Monitor Agent HQ activities, workflows, and performance through the monitoring server defined in `mcp/agent-hq-monitor-server.ts`.
+
+1. The monitoring server is automatically configured in `.vscode/mcp.json`.
+2. No additional setup required—monitoring is optional and can be enabled on-demand.
+3. Ask Copilot Chat to:
+   - "Show Agent HQ status"
+   - "Display agent performance metrics"
+   - "Show recent workflows"
+   - "What agents have been invoked today?"
+4. Monitoring logs are stored in the `logs/` directory (automatically created when needed).
+5. The monitoring server exposes tools like `agentHQ.getStatus`, `agentHQ.getMetrics`, and `agentHQ.getRecentActivities`.
+
+📖 **[Complete monitoring documentation](docs/agent-hq-monitoring.md)** includes detailed usage, troubleshooting, and best practices.
+
 ### Installing Playwright Agent Chat Modes (Planner, Generator, Healer)
 
 Install the Playwright Agent chat modes once per workspace to populate `.github/chatmodes/` for Copilot.
@@ -117,9 +133,12 @@ This repository includes specialized custom agents in `.github/agents/` that ext
 "Fix all failing tests" → Runs tests, then routes failures to Healer
 "Convert Jira story SCRUM-10 to tests" → Routes to Test Designer
 "What testing agents are available?" → Shows agent catalog
+"Show me Agent HQ status" → Displays system health and metrics
 ```
 
 📖 **[Read the complete Agent HQ Usage Guide](docs/agent-hq-guide.md)** for detailed examples and workflows.
+
+📊 **[Learn about Agent HQ Monitoring](docs/agent-hq-monitoring.md)** to track agent activities and performance.
 
 ### Test Designer 🎨
 
