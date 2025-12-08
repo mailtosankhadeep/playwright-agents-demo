@@ -16,6 +16,15 @@
         "--transpile-only",
         "mcp/jira-server.ts"
       ]
+    },
+    "agent-hq-monitor": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "ts-node",
+        "--transpile-only",
+        "mcp/agent-hq-monitor-server.ts"
+      ]
     }
   },
   "inputs": []
