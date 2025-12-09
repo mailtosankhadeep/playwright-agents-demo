@@ -222,7 +222,7 @@ Test Designer will:
 **Solutions**:
 1. Install Playwright agents: `npx playwright init-agents --loop=vscode`
 2. Verify files exist in `.github/chatmodes/`:
-   - `🎭 planner.chatmode.md`
+   - ` 🎭 planner.chatmode.md` (note the space before the emoji)
    - `🎭 generator.chatmode.md`
    - `🎭 healer.chatmode.md`
 3. Reload VS Code
@@ -239,7 +239,7 @@ Test Designer will:
 - **[README.md](README.md)**: Project overview and setup
 - **[Agent HQ Guide](docs/agent-hq-guide.md)**: Detailed Agent HQ usage examples
 - **[Agent HQ Monitoring](docs/agent-hq-monitoring.md)**: Monitor agent activities
-- **[.github/agents/](./github/agents/)**: Custom agent source files
+- **[.github/agents/](.github/agents/)**: Custom agent source files
 
 ## Creating Your Own Agents
 
