@@ -1,6 +1,7 @@
 name:my-agent
 
 description: 'Example custom agent template demonstrating YAML frontmatter structure and agent capabilities.'
+model: 'gpt-5.1-preview'
 delegation:
   accept_issues: true
   accept_pull_requests: true
@@ -27,6 +28,8 @@ The YAML frontmatter at the top of this file defines key metadata about the agen
 ### Required Fields
 
 **description**: A brief, one-line description of what this agent does.
+
+**model**: The AI model to use for this agent (e.g., 'gpt-5.1-preview', 'gpt-4', 'gpt-4-turbo'). This specifies which language model powers the agent's capabilities.
 
 **tools**: Array of tools/capabilities this agent can use. Examples:
 - `filesystem.read`, `filesystem.write` - File operations
