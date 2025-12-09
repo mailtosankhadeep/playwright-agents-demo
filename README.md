@@ -116,7 +116,31 @@ If you prefer non-interactive startup, adjust the args to `"args": ["--yes", "pl
 
 ## Custom Agents
 
-This repository includes specialized custom agents in `.github/agents/` that extend Copilot's capabilities:
+This repository includes specialized custom agents in `.github/agents/` that extend Copilot's capabilities.
+
+### Enabling Custom Agents in VS Code
+
+Custom agents are automatically discovered when the proper VS Code settings are configured. This repository includes `.vscode/settings.json` with the following configuration:
+
+```json
+{
+  "chat.agent.enabled": true,
+  "github.copilot.chat.agents.enabled": true,
+  "chat.modeFilesLocations": {
+    ".github/agents": true
+  },
+  "chat.useAgentsMdFile": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.commandCenter.enabled": true
+}
+```
+
+After cloning the repository:
+1. Ensure GitHub Copilot extension is installed and enabled
+2. Reload VS Code (Command Palette → `Developer: Reload Window`)
+3. Custom agents will appear in the Copilot Chat agents dropdown
+
+### Available Custom Agents
 
 ### Agent HQ 🏢
 

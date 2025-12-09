@@ -212,6 +212,23 @@ npx playwright init-agents --loop=vscode
 **Solution**: Reload VS Code window:
 - Command Palette → "Developer: Reload Window"
 
+### "Custom agents not found" or "Agent not available"
+**Solution**: Ensure VS Code settings are properly configured:
+1. Check that `.vscode/settings.json` exists with custom agent settings
+2. Verify the following settings are present:
+   ```json
+   {
+     "chat.agent.enabled": true,
+     "github.copilot.chat.agents.enabled": true,
+     "chat.modeFilesLocations": {
+       ".github/agents": true
+     }
+   }
+   ```
+3. Reload VS Code window: Command Palette → "Developer: Reload Window"
+4. Verify GitHub Copilot extension is installed and enabled
+5. Check that custom agent files exist in `.github/agents/` folder
+
 ## Advanced Usage
 
 ### Batch Processing Multiple Stories
