@@ -225,9 +225,27 @@ npx playwright init-agents --loop=vscode
 ```
 
 ### Specific Agent Selection
+
+You can select custom agents directly in VS Code using the `@` mention syntax:
+
+```
+@agent-hq I need to test our new checkout flow
+@test-designer Convert Jira story SCRUM-10 to tests
+```
+
+Or mention them in natural language:
 ```
 "Use the Healer agent to fix user-login.spec.ts"
+"Ask Agent HQ to show available agents"
+"Have Test Designer work on SCRUM-15"
 ```
+
+**Available Custom Agents:**
+- `@agent-hq` - Central orchestration hub for all testing workflows
+- `@test-designer` - Jira to BDD scenario conversion and test generation
+- `@my-agent` - Example custom agent template
+
+The agents are automatically registered in `.vscode/settings.json` and appear in the Copilot Chat agent picker when you type `@`.
 
 ## Monitoring Agent HQ
 

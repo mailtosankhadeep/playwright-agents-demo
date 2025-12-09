@@ -150,5 +150,33 @@ This repository includes specialized custom agents in `.github/agents/` that ext
 
 Requires Jira environment variables (`JIRA_BASE_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`).
 
+### How to Select Custom Agents
+
+Custom agents are automatically available in VS Code with GitHub Copilot. The repository includes a `.vscode/settings.json` file that registers all custom agents.
+
+**To use a custom agent:**
+
+1. **Via Chat**: Open GitHub Copilot Chat in VS Code (Ctrl+Shift+I / Cmd+Shift+I)
+2. **Select Agent**: Type `@` to see the list of available agents:
+   - `@agent-hq` - Central orchestration hub
+   - `@test-designer` - Jira to BDD conversion
+   - `@my-agent` - Example custom agent template
+3. **Send Request**: Select an agent and describe your task
+
+**Example:**
+```
+@agent-hq I need to test our new checkout flow
+@test-designer Convert Jira story SCRUM-10 to tests
+```
+
+**Alternative - Mention in Chat:**
+You can also mention agents by name in your chat messages:
+```
+"Use Agent HQ to fix all failing tests"
+"Ask Test Designer to convert SCRUM-15"
+```
+
+The custom agents are defined in `.github/agents/` and can be extended or customized for your team's needs.
+
 ## GitHub Setup
 This repository is ready for GitHub pushes. Use the provided `.gitignore` to keep dependencies, build artefacts, and IDE files out of version control.

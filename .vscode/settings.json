@@ -1,0 +1,30 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "When working with Playwright tests in this repository, consider using the available custom agents for specialized tasks."
+    }
+  ],
+  "github.copilot.chat.agents": [
+    {
+      "id": "agent-hq",
+      "name": "Agent HQ",
+      "description": "Central command center for orchestrating Playwright agents and test automation workflows",
+      "path": ".github/agents/Agent HQ.agent.md",
+      "icon": "🏢"
+    },
+    {
+      "id": "test-designer",
+      "name": "Test Designer",
+      "description": "Designs BDD scenarios from Jira and orchestrates Generator/Healer to produce Playwright step definitions",
+      "path": ".github/agents/Test Designer.agent.md",
+      "icon": "🎨"
+    },
+    {
+      "id": "my-agent",
+      "name": "My Agent",
+      "description": "Example custom agent template demonstrating YAML frontmatter structure and agent capabilities",
+      "path": ".github/agents/my-agent.agent.md",
+      "icon": "🤖"
+    }
+  ]
+}
