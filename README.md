@@ -2,6 +2,14 @@
 
 Automated UI testing playground for [practice-automation.com](https://practice-automation.com) using Playwright. The project mixes traditional Playwright specs with Cucumber BDD scenarios (implemented in TypeScript) and captures Playwright traces for every BDD run.
 
+## 🚀 Quick Start: Accessing Agents
+
+**Want to use the custom agents in this repo?** See **[ACCESSING_AGENTS.md](ACCESSING_AGENTS.md)** for a complete guide on how to:
+- Enable and discover agents in VS Code
+- Invoke agents through Copilot Chat
+- Use agents from GitHub Issues and PRs
+- Troubleshoot common issues
+
 ## Prerequisites
 - Node.js 18+
 - npm (bundled with Node.js)
@@ -117,6 +125,8 @@ If you prefer non-interactive startup, adjust the args to `"args": ["--yes", "pl
 ## Custom Agents
 
 This repository includes specialized custom agents in `.github/agents/` that extend Copilot's capabilities.
+
+📚 **[Complete Guide: ACCESSING_AGENTS.md](ACCESSING_AGENTS.md)** - Step-by-step instructions for enabling, discovering, and using all agents.
 
 ### Enabling Custom Agents in VS Code
 

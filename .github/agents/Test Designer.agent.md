@@ -1,3 +1,5 @@
+name:Test-Designer
+
 description: 'Designs BDD scenarios from Jira and orchestrates Generator/Healer to produce Playwright step definitions.'
 model: 'gpt-5.1-preview'
 tools:
